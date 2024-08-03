@@ -1,10 +1,10 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 
 const tabs = ['Hesabım', 'Şirket', 'Ekip Üyeleri', 'Faturalama']
 // State setter fonksiyonunu kullanarak geçerli sekmeyi güncelleyin (tıklandığında görünümünü değiştirmek için)
 export default function Tabs() {
   const [currentTab, setCurrentTab] = useState('Hesabım')
-  // let currentTab = "Hesabım;
+  //let currentTab = "Hesabım";
 
   return (
     <div className='flex justify-center my-8'>
@@ -13,7 +13,8 @@ export default function Tabs() {
           <button
             key={tab}
             onClick={() => {
-              currentTab = tab
+              //currentTab = tab
+              setCurrentTab(tab)
             }}
             className={`${
               tab === currentTab
